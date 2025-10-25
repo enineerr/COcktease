@@ -6,9 +6,9 @@ from os import system
 
 class b2tb:
     def __init__(self) -> None:
-        self.min: int = 1 * 60
-        self.max: int = 3 * 60
-        self.formats = ["mp3", "wav", "aac", "flac", "mp4", "mov"]
+        self.min: int = 15 * 60
+        self.max: int = 20 * 60
+        self.formats = ["mp3", "wav", "aac", "flac", "mp4", "mov", "mkv"]
         self.main()
 
     def main(self):
@@ -27,7 +27,7 @@ class b2tb:
 
             i = randint(0, len(mpL))
 
-            system(f"ffplay -autoexit -nodisp {mpL[i].absolute()}")
+            system(f"ffplay -autoexit -nodisp '{mpL[i].absolute()}'")
 
 
 b2tb()
