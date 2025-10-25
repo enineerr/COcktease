@@ -8,26 +8,26 @@ class b2tb:
     def __init__(self) -> None:
         self.min: int = 1
         self.max: int = 3
+        self.formats = ["mp3", "wav", "aac", "flac", "mp4", "mov"]
         self.main()
 
     def main(self):
         while (True):
-            timeout = randint(self.min, self.max) * 60
+            timeout = randint(self.min, self.max) / 60
             print(timeout)
             s(timeout)
 
-            mp = Path(".").glob("*.wav")
-
             mpL = []
-            for i in mp:
-                mpL.append(i)
+            for i in self.formats:
+                mp = Path("/home/user/Music/Cocktease/.").glob(f"*.{i}")
+                for i in mp:
+                    mpL.append(i)
+
             print(mpL)
 
-            mp = mpL
+            i = randint(0, len(mpL))
 
-            i = randint(0, len(mp))
-
-            system(f"ffplay -autoexit -nodisp {mp[i].absolute()}")
+            system(f"ffplay -autoexit -nodisp {mpL[i].absolute()}")
 
 
 b2tb()
