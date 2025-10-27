@@ -1,3 +1,3 @@
-from .cocktease import cocktease
+from GUI import GUI
 
-cocktease()
+GUI()

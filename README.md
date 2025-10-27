@@ -1,2 +1,6 @@
 # Friday Night Freaking
--# the worst program ever seen on earth
+this should never have been created
+
+## Features many shitty audio/video spammers SUCH AS:
+### cocktease
+### VERBS

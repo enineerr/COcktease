@@ -1,0 +1,9 @@
+{
+    "flake8.args": [
+        "--max-line-length=120", "--ignore=E266"
+    ],
+    "editor.detectIndentation": false,
+    "editor.autoIndentOnPaste": true,
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 4
+}
